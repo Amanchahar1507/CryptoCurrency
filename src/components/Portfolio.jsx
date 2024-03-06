@@ -86,12 +86,12 @@ export const Portfolio = () => {
       <div className="bg-white bg-opacity-10 backdrop-blur-md border border-black rounded-lg shadow-lg">
         <div className="mt-3">
           {" "}
-          <span className="text-lg text-black font-semibold pt-6 ml-8">
+          <span className="text-lg text-black font-semibold pt-2 ml-8">
             Portfolio{" "}
           </span>
         </div>
 
-        <div className="xl:w-[240px] xl:h-[180px] md:w-[240px] md:h-[20px] xl:ml-[100px] md:ml-[70px] w-[230px] h-[170px] ml-[60px] -mt-[15px]">
+        <div className="xl:w-[240px] xl:h-[180px] md:w-[230px] md:h-[20px] xl:ml-[100px] md:ml-[70px] w-[230px] h-[170px] ml-[60px] -mt-[7px]">
           <Pie data={data} options={options} />
         </div>
         <div className="mt-7"> </div>

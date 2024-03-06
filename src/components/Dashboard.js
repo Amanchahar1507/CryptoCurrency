@@ -26,10 +26,10 @@ function Dashboard() {
     <>
       {(
         <>
-        <div className="bg-gradient-to-r from-[#2A5470] to-[#4C4177] flex bg-opacity-10 backdrop-blur-md">
+        <div className="bg-gradient-to-r from-[#f2f6f8] to-[#fbfaff] flex bg-opacity-10 backdrop-blur-md">
         <Header />
         </div>
-          <div className="py-4 px-4 bg-gradient-to-r from-[#2A5470] to-[#4C4177] bg-opacity-60 backdrop-blur-md">
+          <div className="py-4 px-4 bg-gradient-to-r from-[#f2f5f7] to-[#f1eff7] bg-opacity-60 backdrop-blur-md">
             <div className="grid grid-cols-1 md:grid-cols-1 lg:grid-cols-4 sm:grid-cols-1 gap-2">
               <div className="md:col-span-3 grid-cols-3 sm:grid-cols-3 container-fluid">
                 <SearchBar />

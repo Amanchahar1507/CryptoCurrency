@@ -8,9 +8,8 @@ body::-webkit-scrollbar-track {
   
   body::-webkit-scrollbar-thumb {
     opacity: 0; 
-    box-shadow: 0px 0px 0px 100000vh #D3D3D3;
+    box-shadow: 0px 0px 0px 100000vh #faf0f0;
   }
 *{
   background-color: white;
-  
 }
