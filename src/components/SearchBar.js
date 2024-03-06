@@ -1,7 +1,7 @@
 import debounce from "lodash.debounce";
 import React, { useContext, useRef, useState } from "react";
 import { CryptoContext } from "../context/CryptoContext";
-import selectIcon from "../assets/select-icon.svg";
+// import selectIcon from "../assets/select-icon.svg";
 import "../App.css";
 
 // user can search cryptos which will result in sidebar
@@ -27,7 +27,7 @@ const SearchInput = ({ handleSearch }) => {
       <form className="flex pl-2 w-full font-body">
         <div className="flex flex-grow rounded-sm shadow-md">
           <div className="flex flex-grow items-center text-black">
-            <span className="absolute text-[13px] lg:text-[13px] sm:text-[12px] md:text-[14px] ml-6 z-10">
+            <span className="absolute text-[13px] lg:text-[13px] sm:text-[12px] md:text-[14px] ml-3 z-10 cursor-pointer">
               <svg
                 xmlns="http://www.w3.org/2000/svg"
                 width="2em"
@@ -36,7 +36,7 @@ const SearchInput = ({ handleSearch }) => {
                 viewBox="0 0 24 24"
               >
                 <path
-                  fill="white"
+                  fill="black"
                   d="m18.031 16.617l4.283 4.282l-1.415 1.415l-4.282-4.283A8.96 8.96 0 0 1 11 20c-4.968 0-9-4.032-9-9s4.032-9 9-9s9 4.032 9 9a8.96 8.96 0 0 1-1.969 5.617zm-2.006-.742A6.977 6.977 0 0 0 18 11c0-3.868-3.133-7-7-7c-3.868 0-7 3.132-7 7c0 3.867 3.132 7 7 7a6.977 6.977 0 0 0 4.875-1.975l.15-.15z"
                 />
               </svg>
@@ -119,7 +119,7 @@ export const SearchBar = () => {
             value={currency}
             onChange={handleCurrency}
             ref={currencyRef}
-            className="border border-black text-black outline-none font-body pr-3 pl-2 rounded-lg w-[90px] md:w-[90px] sm:w-[90px] cursor-pointer bg-white bg-opacity-10 backdrop-blur-md z-1"
+            className="border border-black text-black outline-none font-body pr-1 pl-2 rounded-lg w-[90px] md:w-[70px] sm:w-[90px] cursor-pointer bg-white bg-opacity-10 backdrop-blur-md"
           >
             <option className="text-black" value={"usd"}>USD</option>
             <option className="text-black" value={"inr"}>INR</option>
@@ -130,15 +130,12 @@ export const SearchBar = () => {
             <option className="text-black" value={"cad"}>CAD</option>
             <option className="text-black" value={"gbp"}>GBP</option>
           </select>
-          <img
+          {/* <img
           src={selectIcon}
           alt="submit"
-          className=" w-[0.7rem] relative h-[1rem] top-4 right-[0.9rem] cursor-pointer"
-        />
-          
+          className="text-black w-[0.7rem] relative h-[1rem] top-4 right-[0.9rem] cursor-pointer"
+        /> */}
         </span>
-        
-
         <div className="relative w-full">
           <SearchInput handleSearch={debounceFunc} />
         </div>

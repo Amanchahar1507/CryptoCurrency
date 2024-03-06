@@ -2,7 +2,7 @@ import React, { useEffect, useContext, useState } from "react";
 import { Line, Bar } from "react-chartjs-2";
 import { Chart, registerables } from "chart.js";
 import { CryptoContext } from "../context/CryptoContext";
-import selectIcon from "../assets/select-icon.svg";
+// import selectIcon from "../assets/select-icon.svg";
 
 Chart.register(...registerables);
 
@@ -113,32 +113,34 @@ export const CryptoChart = () => {
             onChange={(e) => {
               setId(e.target.value);
             }}
-            className="w-full bg-transparent text-transform: capitalize outline-none -mr-2"
+            className="w-full bg-transparent text-transform: capitalize outline-none -mr-2 cursor-pointer"
           >
-            {cryptoId &&
+            {cryptoId?
               Object.values(cryptoId).map((d, k) => (
                 <option key={k} value={d.id} name={d.name} className="text-black">
                   {d.id}
                 </option>
-              ))}
+              )) : <option key={0} value={'Bitcoin'} name={'BTC'} className="text-black">
+                {'BTC'}
+              </option>}
           </select>
-          <span>
+          {/* <span>
           <img src={selectIcon} alt="selecticon" className="w-[0.7rem] h-auto relative lg:right-[0.4rem] right-[0.4rem] sm:right-[0.4rem] pointer-events-none" />
-          </span>
+          </span> */}
           {/* user can select different types of charts */}
           <div className="rounded-md bg-black bg-opacity-30 backdrop-blur-md text-black p-2 absolute lg:left-[6rem] md:left-[6rem] left-[6rem] w-28 ml-5">
             <select
               onChange={(e) => setChartType(e.target.value)}
-              className="text-black bg-transparent outline-none w-full sm:justify-center"
+              className="text-black bg-transparent outline-none w-full sm:justify-center cursor-pointer"
             >
               <option className="text-black" value={`LineChart`}>Line Chart</option>
               <option className="text-black" value={`BarChart`}>Bar Chart</option>
               <option className="text-black" value={`BarChartH`}>Bar Chart Horizontal</option>
              
             </select>
-            <span className="absolute top-[0.9rem] right-[0.7rem] w-[0.7rem] h-auto">
-          <img src={selectIcon} alt="selecticon" className="lg:right-[0.4rem] right-[0.4rem] sm:right-[0.4rem] pointer-events-none color:black" />
-          </span>
+            {/* <span className="absolute top-[0.9rem] right-[0.7rem] w-[0.7rem] h-auto"> */}
+          {/* <img src={selectIcon} alt="selecticon" className="lg:right-[0.4rem] right-[0.4rem] sm:right-[0.4rem] pointer-events-none text-black cursor-pointer" /> */}
+          {/* </span> */}
             
           </div>
         </div>
