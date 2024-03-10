@@ -9,7 +9,7 @@
 
 Introduction-> This is the frontend project which is a crypto-dashboard.
 
-Deployed link->https://crypto-dash-board-inky.vercel.app/
+Deployed link->
 
 <details>
     <summary>Content</summary>
@@ -61,7 +61,7 @@ Deployed link->https://crypto-dash-board-inky.vercel.app/
 - To run this project locally, use the following command in your CLI:
 
 ```bash
-  git clone "https://github.com/mdglankush65/CryptoDashBoard"
+  git clone ""
 ```
 
 - Open your favorite code editor and run locally!
